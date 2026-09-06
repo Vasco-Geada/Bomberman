@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bomberman</title>
+    <link rel="icon" href="https://icons.iconarchive.com/icons/yellowicon/game-stars/256/Bomberman-icon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a22fe4b44b.js" crossorigin="anonymous"></script>
+
+    <script src="lib/extendjs/extend.min.js"></script>
+    <script src="lib/animation/requestAnimationFramePolyfill.js"></script>
+    <script src="lib/input/keyboard.js"></script>
+    <script src="lib/net/AJAX.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="SpriteSheet.js"></script>
+    <script src="GameTimer.js"></script>
+    <script src="Entity.js"></script>
+
+
+    <script src="Player.js"></script>
+    <script src="PowerUp.js"></script>
+    <script src="Inimigo.js"></script>
+    <script src="Chave.js"></script>
+    <script src="Caixa.js"></script>
+    <script src="Explosao.js"></script>
+    <script src="Bomba.js"></script>
+
+    <script src="Game.js"></script>
+
+</head>
+
+<body>
+    <div id="touchToStart" class="start">
+        <h1>Toca para começar</h1>
+    </div>
+    <div id="contador" class="scoreBoard hiden">
+        <div class="background">
+            <img class="backgroundImg" src="sprites/panelScore.png" alt="" srcset="">
+        </div>
+        <div class="player">
+            <img class="avatar" src="sprites/avatarPlayer.png" alt="" srcset="">
+            <p id="score" class="score">0</p>
+        </div>
+        <div class="nivel">
+            <p>Stage </p>
+            <p id="stageLvl" class="bold"> 1</p>
+        </div>
+        <div class="tempo">
+            <p class="time" id="min">220</p>
+            <p>:</p>
+            <p class="time" id="seg">220</p>
+        </div>
+        <div class="bomba">
+            <img class="avatar" src="sprites/bomba_img.png" alt="" srcset="">
+            <p id="bombsAvailable" class="bold">00</p>
+        </div>
+        <div class="key ">
+            <img id="key" class="avatar unavailable" src="sprites/key.png" alt="" srcset="">
+        </div>
+        <div class="inimigo powerUp">
+            <img class="avatar" src="sprites/avatarInimigo.png" alt="" srcset="">
+            <p id="inimigoCounter" class="bold">00</p>
+        </div>
+        <div class="powerUp">
+            <img class="avatar" src="sprites/moveDown.png" alt="" srcset="">
+            <p id="speedDownCounter" class="bold">00</p>
+        </div>
+        <div class="powerUp">
+            <img class="avatar" src="sprites/moveUp.png" alt="" srcset="">
+            <p id="speedUpCounter" class="bold">00</p>
+        </div>
+        <div class="powerUp">
+            <img class="avatar" src="sprites/bomba.png" alt="" srcset="">
+            <p id="bombAddCounter" class="bold">00</p>
+        </div>
+    </div>
+    <div class="jogo">
+        <div id="transition" class="transition hide">
+            <div class="loadingScreen">
+                <h1 id="nivel">Nível 1</h1>
+            </div>
+        </div>
+
+        <div id="menu" class="transition">
+            <div id="mn" class="menu">
+                <h1 id="titulo" class="titulo">Bomberman</h1>
+                <h3 id="mensagem" class="mensagem hide">Ganhaste!</h3>
+                <h3 id="mensagemLose" class="mensagem hide">Perdeste!</h3>
+                <h3 id="mensagemFinish" class="mensagem hide">Acabou!</h3>
+                <div id="pontuacao" class="pontuacao">
+                    <h3 class="scoreTitle">Pontuação:</h3>
+                    <p id="scoreEnd" class="score">0</p>
+                </div>
+                <div id="botoes" class="botoes">
+                    <button id="jogar" class="jogar-btn" onclick=(iniciarCampanha())>Modo Campanha</button>
+                    <button id="jogarInfinito" class="jogar-btn" onclick=(iniciarInfinito())>Modo infinito</button>
+                    <button id="instrucoes" class="jogar-btn" onclick=(abrirRegras())>Regras</button>
+                    <button id="controlosBtn" class="jogar-btn" onclick=(abrirControlos())>Controlos</button>
+                </div>
+                <button id="goToMenu" class="jogar-btn hide" onclick=(mostrarMenu())>Ir para o menu</button>
+            </div>
+            <div id="regras" class="menu instrucao hide">
+                <div class="objetivo">
+                    <h3>Objetivo do Jogo:</h3>
+                    <ol>
+                        <li>Destroi as caixas para encontrares a chave do Alçapão.</li>
+                        <li>Elimina todos os inimigos evitando as suas bombas.</li>
+                        <li>Abre o Alçapão para avançar para o próximo nível.</li>
+                    </ol>
+                </div>
+
+                <div class="powerUps">
+                    <h3>PowerUps:</h3>
+                    <img src="sprites/bomba.png" alt="" srcset="" style="width: 60px; height: 60px;">
+                    <img src="sprites/moveDown.png" alt="" srcset="" style="width: 60px; height: 60px;">
+                    <img src="sprites/moveUp.png" alt="" srcset="" style="width: 60px; height: 60px;">
+                    <ol>
+                        <li>Adiciona mais 1 bomba à tua capacidade máxima.</li>
+                        <li>Diminui a velocidade a que te moves.</li>
+                        <li>Aumenta a velocidade a que te moves.</li>
+                    </ol>
+                </div>
+
+                <button id="instrucoes" class="jogar-btn" onclick=(abrirRegras())>Voltar</button>
+            </div>
+            <div id="controlos" class="menu instrucao hide">
+                <div class="teclas">
+                    <h3>Teclas:</h3>
+                    <p><b>W</b> -> ANDAR FRENTE</p>
+                    <p><b>A</b> -> ANDAR ESQUERDA</p>
+                    <p><b>S</b> -> ANDAR TRÁS</p>
+                    <p><b>D</b> -> ANDAR DIREITA</p>
+                    <p><b>P</b> -> PAUSA O JOGO</p>
+                    <p>ESPAÇO -> COLOCAR BOMBA</p>
+                </div>
+                <button id="voltar" class="jogar-btn voltar" onclick=(abrirControlos())>Voltar</button>
+            </div>
+        </div>
+
+        <canvas id="stage" height="550" width="750"></canvas>
+
+        <div class="controlos">
+            <div class="move">
+                <div id="btnUp" class="btnUp">
+                    <i class="fa-solid fa-circle-arrow-up"></i>
+                </div>
+
+
+                <div id="btnLft" class="btnLeft">
+                    <i class="fa-solid fa-circle-arrow-up fa-rotate-270"></i>
+
+                </div>
+
+                <div id="btnRgt" class="btnRight">
+                    <i class="fa-solid fa-circle-arrow-up fa-rotate-90"></i></div>
+                <div id="btnDwn" class="btnDown">
+                    <i class="fa-solid fa-circle-arrow-up fa-rotate-180"></i>
+                </div>
+            </div>
+
+            <div id="touchBomb" class="placeBomb">
+                <img class="bombImg" src="sprites/bomba_img.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

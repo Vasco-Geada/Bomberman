@@ -1,0 +1,108 @@
+{"frames": {
+
+"LANTERNA_1.png":
+{
+	"frame": {"x":1,"y":1,"w":32,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":41},
+	"sourceSize": {"w":32,"h":52}
+},
+"PEDRA_1.png":
+{
+	"frame": {"x":35,"y":1,"w":32,"h":40},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":1,"w":32,"h":40},
+	"sourceSize": {"w":32,"h":52}
+},
+"TIJOLO_1.png":
+{
+	"frame": {"x":69,"y":1,"w":32,"h":37},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":15,"w":32,"h":37},
+	"sourceSize": {"w":32,"h":52}
+},
+"TIJOLOMORTO_1.png":
+{
+	"frame": {"x":69,"y":1,"w":32,"h":37},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":15,"w":32,"h":37},
+	"sourceSize": {"w":32,"h":52}
+},
+"TIJOLOMORTO_2.png":
+{
+	"frame": {"x":103,"y":1,"w":32,"h":39},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":13,"w":32,"h":39},
+	"sourceSize": {"w":32,"h":52}
+},
+"TIJOLOMORTO_3.png":
+{
+	"frame": {"x":1,"y":44,"w":32,"h":43},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":9,"w":32,"h":43},
+	"sourceSize": {"w":32,"h":52}
+},
+"TIJOLOMORTO_4.png":
+{
+	"frame": {"x":35,"y":44,"w":32,"h":42},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":3,"w":32,"h":42},
+	"sourceSize": {"w":32,"h":52}
+},
+"CAPELA_1.png":
+{
+	"frame": {"x":69,"y":44,"w":32,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":11,"w":32,"h":41},
+	"sourceSize": {"w":32,"h":52}
+},
+"CAPELAMORTO_1.png":
+{
+	"frame": {"x":69,"y":44,"w":32,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":11,"w":32,"h":41},
+	"sourceSize": {"w":32,"h":52}
+},
+"CAPELAMORTO_2.png":
+{
+	"frame": {"x":103,"y":44,"w":32,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":11,"w":32,"h":41},
+	"sourceSize": {"w":32,"h":52}
+},
+"CAPELAMORTO_3.png":
+{
+	"frame": {"x":1,"y":89,"w":32,"h":49},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":3,"w":32,"h":49},
+	"sourceSize": {"w":32,"h":52}
+},
+"CAPELAMORTO_4.png":
+{
+	"frame": {"x":35,"y":89,"w":32,"h":48},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":48},
+	"sourceSize": {"w":32,"h":52}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "caixas.png",
+	"format": "RGBA8888",
+	"size": {"w":139,"h":139},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:decbbf94e6c0cf507b35acb60e550ace:f4706828d714a8b54a39c5a793c71d3c:396782f431d156ae6e7e6d70d3bb502b$"
+}
+}

@@ -1,0 +1,122 @@
+{"frames": {
+
+"KEY_1.png":
+{
+	"frame": {"x":0,"y":0,"w":14,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":16},
+	"sourceSize": {"w":14,"h":16},
+	"vertices": [ [14,16], [4,16], [0,8], [0,0], [14,0] ],
+	"verticesUV": [ [14,16], [4,16], [0,8], [0,0], [14,0] ],
+	"triangles": [ [2,3,4], [0,2,4], [0,1,2] ]
+},
+"KEY_2.png":
+{
+	"frame": {"x":14,"y":0,"w":11,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":16},
+	"sourceSize": {"w":11,"h":16},
+	"vertices": [ [11,16], [0,16], [0,0], [11,0] ],
+	"verticesUV": [ [25,16], [14,16], [14,0], [25,0] ],
+	"triangles": [ [1,2,3], [0,1,3] ]
+},
+"KEY_3.png":
+{
+	"frame": {"x":25,"y":0,"w":5,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":5,"h":16},
+	"sourceSize": {"w":5,"h":16},
+	"vertices": [ [5,16], [0,16], [0,0], [5,0] ],
+	"verticesUV": [ [30,16], [25,16], [25,0], [30,0] ],
+	"triangles": [ [1,2,3], [0,1,3] ]
+},
+"KEY_4.png":
+{
+	"frame": {"x":30,"y":0,"w":11,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":16},
+	"sourceSize": {"w":11,"h":16},
+	"vertices": [ [11,16], [0,16], [0,0], [11,0] ],
+	"verticesUV": [ [41,16], [30,16], [30,0], [41,0] ],
+	"triangles": [ [1,2,3], [0,1,3] ]
+},
+"KEY_5.png":
+{
+	"frame": {"x":41,"y":0,"w":14,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":16},
+	"sourceSize": {"w":14,"h":16},
+	"vertices": [ [14,16], [1,16], [0,8], [0,0], [14,0] ],
+	"verticesUV": [ [55,16], [42,16], [41,8], [41,0], [55,0] ],
+	"triangles": [ [2,3,4], [0,2,4], [0,1,2] ]
+},
+"KEY_6.png":
+{
+	"frame": {"x":55,"y":0,"w":11,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":16},
+	"sourceSize": {"w":11,"h":16},
+	"vertices": [ [11,16], [0,16], [0,0], [11,0] ],
+	"verticesUV": [ [66,16], [55,16], [55,0], [66,0] ],
+	"triangles": [ [1,2,3], [0,1,3] ]
+},
+"KEY_7.png":
+{
+	"frame": {"x":66,"y":0,"w":5,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":5,"h":16},
+	"sourceSize": {"w":5,"h":16},
+	"vertices": [ [5,16], [0,16], [0,0], [5,0] ],
+	"verticesUV": [ [71,16], [66,16], [66,0], [71,0] ],
+	"triangles": [ [1,2,3], [0,1,3] ]
+},
+"KEY_8.png":
+{
+	"frame": {"x":0,"y":16,"w":11,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":16},
+	"sourceSize": {"w":11,"h":16},
+	"vertices": [ [11,16], [0,16], [0,0], [11,0] ],
+	"verticesUV": [ [11,32], [0,32], [0,16], [11,16] ],
+	"triangles": [ [1,2,3], [0,1,3] ]
+},
+"TRAPCLOSE_1.png":
+{
+	"frame": {"x":11,"y":16,"w":34,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":19,"w":34,"h":30},
+	"sourceSize": {"w":60,"h":60},
+	"vertices": [ [48,49], [14,49], [14,19], [48,19] ],
+	"verticesUV": [ [45,46], [11,46], [11,16], [45,16] ],
+	"triangles": [ [1,2,3], [0,1,3] ]
+},
+"TRAPOPEN_2.png":
+{
+	"frame": {"x":0,"y":46,"w":34,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":17,"w":34,"h":30},
+	"sourceSize": {"w":60,"h":60},
+	"vertices": [ [48,47], [14,47], [14,17], [48,17] ],
+	"verticesUV": [ [34,76], [0,76], [0,46], [34,46] ],
+	"triangles": [ [1,2,3], [0,1,3] ]
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "trapdoor.png",
+	"format": "RGBA8888",
+	"size": {"w":76,"h":76},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:cb23f15bce7e7bae561a548c96a0500f:a04dcd3fedb7326e47516128515d1d57:7b1026a487aee130c63b4cab1e12d0cf$"
+}
+}
